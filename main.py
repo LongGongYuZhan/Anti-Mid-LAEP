@@ -348,8 +348,9 @@ def receiver_main():
 
 
 if __name__ == '__main__':
-    # E5E0052B-E3C6-DC4F-BDCB-C2F0F0F658B8
-    Logo.print_Logo()
+    # 示例UUID：E5E0052B-E3C6-DC4F-BDCB-C2F0F0F658B9
+    i = os.system("cls")  # 清屏
+    Logo.print_Logo()  # 打印logo
 
     c = input(LOG + "请问您是图片发送方(sender)，还是图片接收方(receiver) (s/r)：")
     while True:
