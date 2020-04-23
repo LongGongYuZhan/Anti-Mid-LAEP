@@ -22,3 +22,5 @@ Windows终端程序，请在DOS下运行。
 **2、运行Service/service.py：**`python service.py`服务器程序，请保持运行。
 **3、运行程序主文件main.py：**`python main.py`
 
+![](display.png)
+
