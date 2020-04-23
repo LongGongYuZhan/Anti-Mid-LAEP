@@ -14,7 +14,7 @@ Windows终端程序，请在DOS下运行。
 **Service/token_service.py**：添加自己的数据库密码与数据库名称  
 数据库配置：  
 数据库：MySQL  
-项目所需所有表结构在**mysql_db/**下，请务必事先建立数据库  
+项目所需所有表结构在**mysql_db//**下，请务必事先建立数据库  
 
 ## 运行指南
 **1、运行Service/token_service.py：**`python token_service.py`  
