@@ -24,4 +24,5 @@ prettytable
 pymysql
 smtplib
 email
+configparser
 
