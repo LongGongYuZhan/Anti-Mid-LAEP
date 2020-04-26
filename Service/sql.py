@@ -2,12 +2,15 @@
 # -*- coding: utf-8 -*-
 import pymysql
 from Service import mail
+from Service import read_ini
+
+host, user, password, database = read_ini.read_ini_sql()
 
 
 class sql_execute(object):
     """用于检测和破解追踪的数据库操作"""
     # 初试化链接数据库
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='', database='')
+    conn = pymysql.connect(host=host, user=user, password=password, database=database)
     cursor = conn.cursor()
 
     def __init__(self, id, uuid, text):
@@ -53,7 +56,7 @@ class sql_execute(object):
 class sql_login_register(object):
     """用于登录注册的数据库操作"""
     # 初试化链接数据库
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='', database='')
+    conn = pymysql.connect(host=host, user=user, password=password, database=database)
     cursor = conn.cursor()
 
     def __init__(self, username, password):
@@ -111,7 +114,7 @@ class sql_login_register(object):
 class sql_select_update(object):
     """查询和修改信息（uuid，邮箱）"""
     # 初试化链接数据库
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='', database='')
+    conn = pymysql.connect(host=host, user=user, password=password, database=database)
     cursor = conn.cursor()
 
     def __init__(self, id):
@@ -169,7 +172,7 @@ class sql_select_update(object):
 class sql_token(object):
     """查询token"""
     # 初试化链接数据库
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='', database='')
+    conn = pymysql.connect(host=host, user=user, password=password, database=database)
     cursor = conn.cursor()
 
     def __init__(self,time):
