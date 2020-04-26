@@ -4,12 +4,14 @@ import smtplib
 import re
 from email.mime.text import MIMEText
 from email.utils import formataddr
+from Service import read_ini
 
+sender, token = read_ini.read_ini_mail()
 
 def send_mail(mail_Recipient, text):
     """发送邮件"""
-    sender = ""  # 这里我用的qq邮箱作为服务器发件箱
-    sender_pass = ""  # qq邮箱验证码
+    sender_mail = sender  # 这里我用的qq邮箱作为服务器发件箱
+    sender_pass = token  # qq邮箱验证码
 
     # text_all = re.findall(r'<table>([\s\S]*)</table>', text)
     # ip_text = text_all[0]
