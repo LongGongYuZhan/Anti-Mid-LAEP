@@ -8,17 +8,13 @@ Windows终端程序，请在DOS下运行。
 
 ## 运行前操作
 安装第三方库：`pip install -r Library.txt`  
-修改代码配置：  
-**Service/mail.py**：添加自己的邮箱与密码（用作服务器发件箱）  
-**Service/sq.py**：每个类中添加自己的数据库密码与数据库名称  
-**Service/token_service.py**：添加自己的数据库密码与数据库名称  
-数据库配置：  
-数据库：MySQL  
-项目所需所有表结构在**mysql_db**文件夹下，请务必事先建立数据库  
+修改配置：  
+服务器程序**Service/service.py**运行前务必修改同目录下的**message.ini**配置文件信息，其中包括数据库的相关信息和服务器端发送邮箱信息。
+（服务器发送邮箱建议选用QQ邮箱和其token进行实验）
 
 ## 运行指南
 **1、运行Service/token_service.py：**`python token_service.py`  
-该代码会在每日0时在数据库中生成token。可在main下调整注释代码，手动修改默认时间至当天0时，运行即可。  
+该代码运行后会在每日0时在数据库中生成token；亦可在main下调整注释代码，手动修改默认时间至当天0时，运行即可。  
 **2、运行Service/service.py：**`python service.py`服务器程序，请保持运行。  
 **3、运行程序主文件main.py：**`python main.py`  
 
