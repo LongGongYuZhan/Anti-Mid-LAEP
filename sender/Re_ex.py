@@ -16,7 +16,7 @@ class Re(object):
     def open_img(self):
         """打开图像文件"""
         # username = getpass.getuser()
-        with open(r"C:\Users\%s\Desktop\output\default%s" % (self.username, self.suffix), 'rb') as f:
+        with open(r"C:\Users\%s\Desktop\output\result%s" % (self.username, self.suffix), 'rb') as f:
             byte_hex = f.read().hex()  # 读取的二进制文件信息转化为16进制处理
         return byte_hex
 
